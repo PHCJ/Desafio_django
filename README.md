@@ -34,3 +34,6 @@ Construir pelo menos dois endpoints utilizando Django:
 ---
 
 by Paulo H. C. Jesus :wave: [LinkedIn](https://www.linkedin.com/in/paulo-henrique-cardoso-de-jesus-680b7b16a/)
+
+![image](https://user-images.githubusercontent.com/22420223/202272739-37b5ac1d-2c66-4f40-85e6-1218de334145.png)
+

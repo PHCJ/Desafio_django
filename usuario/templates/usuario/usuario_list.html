@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% block content %}
+<div class="offset-1 col-10 list-div">
+  <h1>Lista de Usuarios</h1>
+
+  <a id="link-cadastro" href="{% url 'usuario.novo' %}">
+    <div class="col-2 add-div"><i class="fas fa-plus"></i>Cadastrar</div>
+  </a>
+  <div class="col-9 search-div">
+    <form method="GET">
+      <input
+        name="nomeBusca"
+        type="text"
+        placehold="Busca por nome"
+        class="form-control"
+      />
+      <button type="submit" class="btnBuscar">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+  </div>
+  <a id="link-json" href="{% url 'usuario.json' %}">
+    <div class="col-2 add-div"><i class="fas fa-code" style="
+      margin-right: 10px;"></i>Consulta Json</div>
+  </a>
+  <div class="usuario-list">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Usuario</th>
+          <th scope="col">Data nascimento</th>
+          <th scope="col">Senha</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for usuario in object_list %}
+        <tr>
+          <td>{{usuario.nomeUsuario}}</td>
+          <td>{{usuario.dataNascimento | date:"d/m/Y"}}</td>
+          <td>***********</td>
+          <td>
+            <a href="{% url 'usuario.editar' usuario.pk%}"
+              ><i class="fas fa-edit"></i
+            ></a>
+            <a href="{% url 'usuario.excluir' usuario.pk%}"
+              ><i class="fas fa-trash"></i
+            ></a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

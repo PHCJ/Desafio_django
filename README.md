@@ -17,7 +17,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS
-- JavaScript e JSON
+- JavaScript
 - [Django](https://www.djangoproject.com/)
 - [SQLite](https://www.sqlite.org/index.html)
 - [pip](https://pypi.org/)
